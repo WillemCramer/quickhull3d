@@ -1,62 +1,32 @@
 {
-  "name": "quickhull3d",
-  "version": "2.1.0",
-  "description": "A quickhull implementation for 3d points",
-  "homepage": "https://github.com/mauriciopoppe/quickhull3d",
-  "author": {
-    "name": "Mauricio Poppe",
-    "email": "mauricio.poppe@gmail.com",
-    "url": "http://mauriciopoppe.com"
+  "name": "quickhull3d-v1",
+  "version": "1.0.0",
+  "description": "qh3d for BABYLON.js",
+  "main": "lib/indexWillem.js",
+  "private": "false",
+  "directories": {
+    "lib": "lib",
+    "test": "test",
+    "dist": "dist"
   },
-  "bugs": "https://github.com/mauriciopoppe/quickhull3d/issues",
-  "main": "dist/index.js",
-  "keywords": [
-    "geometry",
-    "3d",
-    "convex hull",
-    "quick hull",
-    "quickhull"
-  ],
   "scripts": {
-    "clean": "rimraf dist",
-    "lint": "standard",
-    "coverage": "jest --coverage",
-    "test": "jest",
-    "test:watch": "watch 'npm test' test lib",
-    "prebuild": "npm run clean -s",
-    "build": "babel lib --out-dir dist",
-    "build:watch": "watch 'npm run build' lib",
-    "preversion": "npm run lint -s && npm run test -s && npm run build -s",
-    "postversion": "git push origin master --follow-tags",
-    "deploy": "git pull --rebase origin master && git push origin master"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "standard": {
-    "ignore": [
-      "/dist"
-    ]
-  },
-  "files": [
-    "/dist",
-    "index.d.ts"
-  ],
-  "license": "MIT",
-  "types": "index.d.ts",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mauriciopoppe/quickhull3d"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "@babylonjs/core/Maths/math.vector": "9.5.1",
+    "@babel/preset-env": "^7.22.5",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@babylonjs/core": "^6.9.0",
-    "debug": "^4.3.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.13",
-    "@babel/preset-env": "^7.18.10",
-    "jest": "^29.0.1",
-    "rimraf": "^5.0.1",
-    "standard": "^17.0.0",
-    "watch": "^1.0.2"
+    "@babylonjs/core/Maths/math.vector": "9.5.1",
+    "assert": "^2.0.0",
+    "http-server": "^14.1.1"
   }
 }
